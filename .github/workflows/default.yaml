@@ -26,7 +26,8 @@ jobs:
           go get .
       - name: Build
         run: |
-          go build -v ./... -ldflags="-X 'main.version=1.1.0'"
+          go build -v -ldflags="-X 'main.version=1.1.0'" ./...
       - name: Test with the Go CLI
         run: |
           go test
+# EOF
